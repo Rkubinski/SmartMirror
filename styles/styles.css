@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+* {
+
+    /*cursor: none;*/
+   
+}
+
+@font-face {
+  font-family: "AppleFont";
+  src: url(../MPL.otf) format("opentype");
+  }
+
+/*For relative positioning - it means relative to its old position, absolute is relative to its parent.*/
+/*For relative positioning - thats why % doesnt work for relative*/
+/*We can make a wrapper that will be properly positioned - using absolute*/
+.spotifyWrap{
+  position: absolute;
+  top: 80%;
+  left: 32.5%;
+  width: 35%; /*50*/
+  height: 30%;
+  display: none;
+
+
+}
+
+
+.spotifyWrap-up
+  {
+  top: 5%;
+}
+
+.spotifyWrap-down
+  {
+  -webkit-transform: translate(0,60%);
+  transform: translate(0,60%);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+
+/*Now, we make a subwrapper that will act as a relatively positioned parent for the sub-elements*/
+.spotifySearch{
+  
+  /*border: 1px solid white;*/
+  height: 50%;
+  width: 100%;
+  position: relative;
+  background: black;
+  overflow: hidden;
+  display: inherit;
+}
+
+.searchResults
+{
+  top:40%;
+  left:10%;
+  height: 30%;
+  width: 80%;
+
+  font-family: 'AppleFont';
+  font-size: 12pt;
+  color: white;
+  background: black;
+  position: absolute;
+  left: 10%;
+  display: inherit;
+}
+
+
+
+.roundedCorners
+{
+
+    border-radius: 25px;
+    background: white;
+    padding: 20px;
+    width: 90%;
+    height: 30%;
+    position: absolute;
+    display: inherit;
+}
+
+#searchicon
+{
+position: absolute;
+
+height: 50%;
+width: 7.5%;
+
+top: 20%;
+display: inherit;
+background-color: #1DB954;
+}
+
+#searchbar 
+{
+  font-size: 20px;
+  font-family: 'AppleFont';
+  background: white;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  border: 0px;
+  left: 12%;
+  display: inherit;
+  
+  
+}
+
+
+#greenSearchButton
+{
+  border-radius: 25px;
+  border: 0;
+  background-color: #1DB954;
+  color: white;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  position:relative;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  outline:none;
+  font-family: 'AppleFont';
+  display: none;
+}
+
+
+
+
+
+.clock {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 50px rgb(69, 249, 255);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    position: absolute;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+}
+
+.clock-up{
+  top:22%;
+  left:15%;
+  
+  
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.clock-down{
+  -webkit-transform: translate(0,50%);
+  transform: translate(0,50%);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+
+#time
+{font-size: 65px;
+    margin: auto;
+    position:absolute;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 30%;
+    width: 80%;
+    text-align: center;
+    /*
+        top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+  }
+
+#date
+{font-size: 35px;
+    margin: auto;
+    position:absolute;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    text-align: center;
+    /*
+    
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+  }
+
+#weekday
+{font-size: 35px;
+    margin: auto;
+    position:absolute;
+    display: block;
+    margin-left:10%;
+    margin-right: 10%;
+    width: 80%;
+    /*
+    top:35%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  */
+  }
+
+
+@-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(69, 249, 255), 0 0 40px rgb(69, 249, 255), 0 0 50px rgb(69, 249, 255), 0 0 60px rgb(69, 249, 255), 0 0 70px rgb(69, 249, 255);
+        }
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px rgb(163, 240, 243), 0 0 40px rgb(163, 240, 243), 0 0 50px rgb(163, 240, 243), 0 0 60px rgb(163, 240, 243), 0 0 70px rgb(163, 240, 243), 0 0 80px rgb(163, 240, 243);
+        }
+      }
+
+.UI_buttons
+{
+  position:absolute;
+  top: 30%;
+  right: 15%;
+  height: 300px;
+  width: 150px;
+
+}
+
+
+.UI_buttons-up
+{
+  position:absolute;
+  -webkit-transform: translate(50%,-75%);
+  transform: translate(50%,-75%);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+
+}
+
+.UI_buttons-down
+{
+  position:absolute;
+  -webkit-transform: translate(0,50%);
+  transform: translate(0,50%);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+
+}
+
+
+.music
+{
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+
+}
+#music_button{
+  background-image: url("../images/play_button.png");
+  position: absolute;
+  
+  border-radius:100%;
+  background-color:black;
+  background-size:cover;
+  background-position:center;
+  border-width:0px;
+  outline:none;
+  width:50%;
+  height: 50%;
+  margin-left: 25%;
+  margin-top: 25%;
+}
+
+.music-on
+{
+  
+  transform:  rotate(90deg);
+  transition: transform .5s linear;
+}
+
+
+.music-off
+{
+  
+  transform:  rotate(360deg);
+  transition: transform .7s linear;
+}
+
+.weather
+{
+  position: absolute;
+  
+  width: 150px;
+  height: 150px;
+  font-family: "AppleFont";
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.display-temp
+{
+  margin-left: 5%;
+  -webkit-transform: translate(-25%,0);
+  transform: translate(-25%,0);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  
+}
+
+.hide-temp
+{
+  margin-left: 30%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  
+}
+
+#temperature_button{
+  background-image: url("../images/temperature_icon.png");
+  border-radius:100%;
+  background-color: black;
+  background-size:cover;
+  background-position:center;
+  border-width:0px;
+  outline:none;
+  position:absolute;
+  width:50%;
+  height: 50%;
+  margin-left: 30%;
+  margin-top: 25%;
+}
+
+
+
+
+
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+input {
+  outline:none;
+ }

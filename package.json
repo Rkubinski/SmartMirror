@@ -1,0 +1,19 @@
+{
+  "name": "mirror_workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^9.1.2",
+    "openweather-apis": "^4.4.1",
+    "opn": "^6.0.0",
+    "request": "^2.88.2",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}

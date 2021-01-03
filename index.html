@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/keyboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Mirror</title>
+</head>
+<body style=background-color:black>
+    <div class="clock">
+        <div id = "time">
+            <span id="hour"></span> : <span id="minute"></span> : <span id="second"></span>
+        </div>
+        <div id = "date">
+            <span id="weekday"></span>
+            <br>
+            <span id ="day"></span> - <span id ="month"></span> - <span id ="year"></span>
+        </div>
+    
+    </div>
+
+
+    <div class="UI_buttons">
+        <div class="music">
+            <button id="music_button"  ></button> <!--onclick="Keyboard.init()"-->
+        </div>
+        
+        <div class="weather">
+            <button id="temperature_button"></button>
+        </div>
+    </div>
+
+    
+    <div class="spotifyWrap">
+        <div class="spotifySearch">
+            
+            <div class ='roundedCorners'>
+                <img id="searchicon" src= "images/search_icon.png">
+                <input id ="searchbar" type="text"  placeholder="Search Music..." name="search"> <!--onkeyup=youtubeSearch()-->
+                
+            </div>
+       
+            
+
+        </div>
+        
+        
+        <div class = "searchResults">
+           
+           <!--<div id="result1"></div>
+            <div id="result2"></div>
+            <div id="result3"></div>
+           -->
+        </div>
+        
+
+        
+
+        
+    </div>  
+
+    <script src='weather.js'></script>
+    <script src='keyboard.js'></script>
+    <script src='spotify_music.js'></script>
+    <script src='clock.js'></script>
+</body>
+</html>

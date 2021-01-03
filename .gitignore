@@ -1,0 +1,5 @@
+arizona*
+*.TTF
+node_modules/
+spotifyAuth.txt
+clientCredentials.json
